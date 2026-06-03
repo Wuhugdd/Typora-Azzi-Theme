@@ -241,7 +241,7 @@
 #file-library-tree > div:first-child > div:nth-child(1) { height: 44px; }
 #file-library-tree > div:first-child > div:nth-child(2) {
     font-size: 24px; font-family: "ClaudeRootCJKLogo", UnifrakturMaguntia;
-    line-height: 30px; padding-top: 10px;
+    line-height: 30px; padding-top: 10px; text-align: center;
 }
 
 /* 文件夹图标颜色（紫调渐变） */

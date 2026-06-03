@@ -46,7 +46,7 @@ azzi/
 
 ## 📷 截图
 
-![Azzi_typora_theme](E:\GitSpace\PersonalProjects\Azzi-Typora-Theme\Azzi_typora_theme.png)
+![azzi](https://gitee.com/wuhu_gdd/typora-image-bed/raw/master/img/azzi.png)
 
 ## 🙏 致谢
 
