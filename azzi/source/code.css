@@ -1,0 +1,245 @@
+/* ---------- 6.7 代码块（Happysimple 双层卡片 + 右上角语言标签） ---------- */
+
+/* 顶栏卡片层 */
+.md-fences {
+    position: relative;
+    margin: 0 !important;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    background-color: #21252b;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+/* macOS 三圆点（照搬 Happysimple） */
+.md-fences::before {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(252, 98, 93);
+    box-shadow: 25px 0px rgb(253, 188, 64),
+        50px 0px rgb(53, 205, 75);
+    z-index: 12;
+    pointer-events: none;
+}
+
+/* 右上角语言标签 */
+.md-fences[lang]:not([lang=""])::after {
+    content: attr(lang);
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(180, 170, 220, 0.55);
+    z-index: 12;
+    pointer-events: none;
+    letter-spacing: 0.02em;
+}
+
+/* 代码主体层（略浅的紫色调深底） */
+.cm-s-inner.CodeMirror {
+    margin: 0;
+    padding: 6px 6px 6px 0;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #abb2bf;
+    background-color: #282c34;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* 行号颜色 */
+.md-fences .CodeMirror-linenumber,
+.cm-s-inner .CodeMirror-linenumber {
+    color: #b8a0ff !important;
+    font-weight: 400;
+}
+
+/* 行号与代码分割线 */
+.CodeMirror-wrap .CodeMirror-code pre {
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.CodeMirror-gutter-filler,
+.CodeMirror-scrollbar-filler,
+.CodeMirror.cm-s-inner.cm-s-null-scroll.CodeMirror-wrap {
+    background-color: transparent;
+}
+
+.CodeMirror-lines {
+    font-size: 0.875rem;
+    font-weight: var(--font-weight);
+    line-height: 1.625;
+    font-family: var(--font-mono);
+}
+
+.CodeMirror pre { padding: 0 !important; }
+
+/* 语言标签输入框（点击编辑时） */
+.ty-input.ty-input-after.ty-cm-lang-input {
+    border: none !important; padding: 0 !important; margin: 0 !important;
+    text-align: left !important;
+    color: rgba(200, 200, 210, 0.60) !important;
+    font-weight: var(--pre-inputfont-weight) !important;
+    font-size: 0.75rem !important;
+    font-family: var(--font-sans);
+}
+
+.md-fences .code-tooltip.md-tooltip-remove {
+    font-size: 0.75rem !important; font-family: var(--font-sans);
+    border: none !important; box-shadow: none !important; margin: 0 !important;
+    padding: 14px 0 0 72px !important;
+    line-height: 17px; height: auto;
+    top: 0px !important; bottom: auto !important; left: 0px !important;
+}
+
+.md-fences .code-tooltip {
+    position: absolute !important;
+    top: 0px !important; left: 0px !important;
+    bottom: auto !important; right: auto !important;
+    padding: 14px 0 0 72px !important;
+    margin: 0 !important; height: auto !important;
+    border: none !important; box-shadow: none !important;
+    background: transparent !important;
+    transition: none !important; animation: none !important;
+    z-index: 10;
+    opacity: 0 !important; visibility: hidden !important; pointer-events: none !important;
+}
+
+.md-fences.md-focus .code-tooltip { visibility: visible !important; pointer-events: auto !important; }
+.md-fences.md-focus .code-tooltip:focus-within { opacity: 1 !important; visibility: visible !important; }
+.md-fences:not(.md-focus) .code-tooltip { opacity: 0 !important; visibility: hidden !important; display: none !important; }
+
+.md-fences .code-tooltip .ty-input {
+    color: rgba(200, 200, 210, 0.60) !important;
+    font-weight: var(--pre-inputfont-weight) !important;
+    font-size: 0.75rem !important;
+    font-family: var(--font-sans) !important;
+    line-height: 17px !important;
+    padding: 0 !important; margin: 0 !important;
+    border: none !important; background: transparent !important;
+    text-align: left !important;
+}
+
+/* Mermaid */
+.md-fences.md-fences-advanced.md-focus[lang="mermaid"] {
+    display: block !important; height: auto !important; min-height: 0 !important;
+    overflow: visible !important; white-space: normal !important;
+}
+.md-fences.md-fences-advanced.md-focus[lang="mermaid"] .md-fences-adv-panel,
+.md-fences.md-fences-advanced.md-focus[lang="mermaid"] .md-diagram-panel,
+.md-fences.md-fences-advanced.md-focus[lang="mermaid"] .md-diagram-panel-preview {
+    position: relative !important; display: block !important; clear: both !important;
+    top: auto !important; right: auto !important; bottom: auto !important; left: auto !important;
+    width: 100% !important; height: auto !important; min-height: 0 !important;
+    margin: 0.75rem 0 0 0 !important; overflow: auto !important; transform: none !important;
+}
+.md-fences.md-fences-advanced.md-focus[lang="mermaid"] .md-diagram-panel-preview > svg,
+.md-fences.md-fences-advanced.md-focus[lang="mermaid"] .md-diagram-panel-preview .mermaid-svg {
+    display: block !important; max-width: 100%; height: auto; margin: 0 auto;
+}
+
+/* 语法高亮（VS Code Dark+ 鲜艳版） */
+.md-fences .cm-comment { color: #6A9955 !important; }
+.md-fences .cm-meta { color: #7eb8ff !important; }
+.md-fences .cm-keyword { color: #C586C0 !important; }
+.md-fences .cm-builtin { color: #DCDCAA !important; }
+.md-fences .cm-string { color: #CE9178 !important; }
+.md-fences .cm-string-2 { color: #CE9178 !important; }
+.md-fences .cm-number { color: #B5CEA8 !important; }
+.md-fences .cm-tag { color: #7eb8ff !important; }
+.md-fences .cm-attribute { color: #9CDCFE !important; }
+.md-fences .cm-property { color: #9CDCFE !important; }
+.md-fences .cm-qualifier { color: #D7BA7D !important; }
+.md-fences .cm-link { color: #4EC9B0 !important; }
+/* 普通代码、运算符、变量 → 白色 */
+.md-fences .cm-operator { color: #e0e0e0 !important; }
+.md-fences .cm-atom { color: #D7BA7D !important; }
+.md-fences .cm-variable { color: #e0e0e0 !important; }
+.md-fences .cm-variable-2 { color: #e0e0e0 !important; }
+.md-fences .cm-variable-3 { color: #e0e0e0 !important; }
+.md-fences .cm-def { color: #DCDCAA !important; }
+.md-fences .cm-bracket { color: #e0e0e0 !important; }
+.md-fences .cm-type { color: #4EC9B0 !important; }
+.md-fences .cm-error { color: #F44747 !important; }
+
+/* 选中的行/代码 */
+.md-fences.md-focus .CodeMirror-code > div.CodeMirror-activeline {
+    background-color: rgba(124, 109, 219, 0.10) !important;
+}
+.cm-s-inner .CodeMirror-selected { background-color: rgba(124, 109, 219, 0.18) !important; }
+.cm-s-inner .CodeMirror-selectedtext { background-color: transparent !important; }
+
+/* 代码块光标 */
+#write .CodeMirror-cursors .CodeMirror-cursor { border-left: 2px solid #c4a0ff; }
+
+/* 代码语言输入框 */
+.md-fences .code-tooltip { padding: 0; background-color: rgba(167, 178, 189, 0.2); }
+.code-tooltip .ty-input { border: 2px solid #000; }
+.code-tooltip .ty-input:focus { border: 2px solid var(--LOGO-color); }
+
+.code-tooltip { box-shadow: 0 1px 1px 0 rgba(153, 102, 255, 0.15) !important; }
+
+/* ---------- 6.8 行内代码 ---------- */
+
+code, tt {
+    font-family: var(--font-mono);
+    background-color: var(--code-bg-color);
+    color: var(--code-font-color);
+    font-size: 0.9rem;
+    border-radius: 0.4rem;
+    border-color: var(--code-border);
+    border-width: 0.5px;
+    padding: 1px 0.25rem;
+    line-height: 21.6px;
+}
+
+/* ---------- 6.9 引用块（Happysimple 多彩风格） ---------- */
+
+blockquote {
+    background-color: transparent;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
+    border-left: 4px solid rgba(124, 109, 219, 0.55);
+    color: #6b5fd4;
+    font-family: var(--font-quote);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+blockquote > p { padding: 0; margin: 0.25rem 0; }
+blockquote ol, blockquote ul { padding: 0 32px; margin: 0.25rem 0; }
+
+/* 引用块中的行内代码保持可读 */
+blockquote code {
+    background-color: rgba(0, 0, 0, 0.06);
+    color: inherit;
+}
+
+/* 多彩引用块：info / warn / danger / success */
+blockquote[alt="info"] {
+    border-left: 5px solid #5fa7e4;
+    background-color: #e4edf6;
+}
+blockquote[alt="warn"] {
+    border-left: 5px solid #f0ad4e;
+    background-color: #FFFACD;
+}
+blockquote[alt="danger"] {
+    border-left: 5px solid #db524f;
+    background-color: #fdeaea;
+}
+blockquote[alt="success"] {
+    border-left: 5px solid #5cb85c;
+    background-color: #eef7f0;
+}
+

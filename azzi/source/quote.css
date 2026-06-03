@@ -1,0 +1,230 @@
+/* ---------- 6.10 GitHub 警告框 ---------- */
+
+#write .md-alert {
+    --alert-accent: var(--LOGO-color);
+    --alert-bg: rgb(255 255 255 / 42%);
+    --alert-bg-soft: rgb(255 255 255 / 18%);
+    --alert-wash: rgba(153, 102, 255, 0.06);
+    --alert-border: rgba(45, 36, 70, 0.10);
+    --alert-shadow: rgba(45, 36, 70, 0.10);
+    position: relative;
+    margin: 0.25rem 2rem 0.75rem 0.75rem;
+    padding: 0.72rem 0.9rem 0.78rem 1rem;
+    color: var(--font-color);
+    background:
+        linear-gradient(180deg, var(--alert-bg), var(--alert-bg-soft)),
+        linear-gradient(90deg, var(--alert-wash), transparent 32%);
+    border: 1px solid var(--alert-border);
+    border-left: 3px solid var(--alert-accent);
+    border-radius: 8px;
+    box-shadow: 0 12px 28px -26px var(--alert-shadow);
+}
+
+#write .md-alert-note { --alert-accent: #6088a8; --alert-bg: rgba(96, 136, 168, 0.08); --alert-bg-soft: rgba(96, 136, 168, 0.03); --alert-wash: rgba(96, 136, 168, 0.08); --alert-border: rgba(96, 136, 168, 0.18); }
+#write .md-alert-tip { --alert-accent: #5a9e6e; --alert-bg: rgba(90, 158, 110, 0.08); --alert-bg-soft: rgba(90, 158, 110, 0.03); --alert-wash: rgba(90, 158, 110, 0.08); --alert-border: rgba(90, 158, 110, 0.18); }
+#write .md-alert-important { --alert-accent: #7c6ddb; --alert-bg: rgba(153, 102, 255, 0.08); --alert-bg-soft: rgba(153, 102, 255, 0.03); --alert-wash: rgba(153, 102, 255, 0.08); --alert-border: rgba(124, 109, 219, 0.18); }
+#write .md-alert-warning { --alert-accent: #c89030; --alert-bg: rgba(200, 144, 48, 0.08); --alert-bg-soft: rgba(200, 144, 48, 0.03); --alert-wash: rgba(200, 144, 48, 0.10); --alert-border: rgba(200, 144, 48, 0.20); }
+#write .md-alert-caution { --alert-accent: #c05050; --alert-bg: rgba(192, 80, 80, 0.08); --alert-bg-soft: rgba(192, 80, 80, 0.03); --alert-wash: rgba(192, 80, 80, 0.08); --alert-border: rgba(192, 80, 80, 0.18); }
+
+#write .md-alert-text {
+    display: flex; align-items: center;
+    margin: 0 0 0.35rem 0;
+    color: var(--alert-accent) !important;
+    font-family: var(--font-sans);
+    font-size: 0.78rem; font-weight: 700; line-height: 1.2;
+}
+#write .md-alert-text svg { width: 1rem; height: 1rem; fill: currentColor; margin-right: 0.42rem; opacity: 0.95; }
+#write .md-alert-text-container::after { text-transform: none; letter-spacing: 0; }
+#write .md-alert p { padding: 0; margin: 0.35rem 0 0 0; line-height: 1.65; }
+#write .md-alert p:first-child { margin-top: 0; }
+#write .md-alert ul, #write .md-alert ol { padding: 0 0 0 1.25rem; margin: 0.35rem 0 0 0; gap: 0.12rem; }
+#write .md-alert code { background-color: rgba(255, 255, 255, 0.48); border-color: var(--alert-border); color: inherit; }
+#write .md-alert .md-fences .CodeMirror,
+#write .md-alert .md-fences .CodeMirror-scroll,
+#write .md-alert .md-fences .CodeMirror-sizer,
+#write .md-alert .md-fences .CodeMirror-lines,
+#write .md-alert .md-fences .CodeMirror-code,
+#write .md-alert .md-fences .CodeMirror-line,
+#write .md-alert .md-fences .CodeMirror pre,
+#write .md-alert .md-fences .CodeMirror-activeline-background,
+#write .md-alert .md-fences .CodeMirror-linebackground,
+#write .md-alert .md-fences .CodeMirror-gutters { color: inherit !important; }
+
+/* ---------- 6.15 注释 ---------- */
+.md-comment { color: var(--LOGO-color); }
+
+/* ---------- 6.12 链接 ---------- */
+
+a {
+    color: #5b8cbf;
+    text-decoration-color: #5b8cbf;
+    text-underline-offset: 2px;
+}
+a:hover { color: var(--LOGO-color); text-decoration-color: var(--LOGO-color); }
+#write a:hover { color: var(--LOGO-color); text-decoration-color: var(--LOGO-color); }
+
+/* ---------- 6.13 多彩字体特效 (Happysimple 风格) ---------- */
+
+/* 彩色小标签 */
+font {
+    display: inline; text-align: center; vertical-align: baseline;
+    padding: 2px 4px;
+    font-family: var(--font-sans); font-weight: 500;
+    color: #fff; background-color: #6aaf7e;
+    border: none; border-radius: 3px;
+}
+font[title="red"]    { background-color: #fe5f58; }
+font[title="yellow"] { background-color: #ffc50a; color: #333; }
+font[title="green"]  { background-color: #8bc34a; }
+font[title="blue"]   { background-color: #02aaf4; }
+font[title="gray"]   { background-color: #777; }
+
+/* 强调型文本 */
+span[alt='solid'] {
+    text-decoration-line: underline;
+    text-decoration-color: #fe5f58; text-decoration-style: solid;
+    text-underline-offset: 2px; text-decoration-thickness: 2px; text-decoration-skip-ink: none;
+}
+span[alt='dashed'] {
+    text-decoration-line: underline;
+    text-decoration-color: #fe5f58; text-decoration-style: dashed;
+    text-underline-offset: 2px; text-decoration-thickness: 2px; text-decoration-skip-ink: none;
+}
+span[alt='dotted'] {
+    text-decoration-line: underline;
+    text-decoration-color: #fe5f58; text-decoration-style: dotted;
+    text-underline-offset: 2px; text-decoration-thickness: 3px; text-decoration-skip-ink: none;
+}
+span[alt='wavy'] {
+    text-decoration-line: underline;
+    text-decoration-color: #fe5f58; text-decoration-style: wavy;
+    text-underline-offset: 2px; text-decoration-thickness: 2px; text-decoration-skip-ink: none;
+}
+span[alt='delete'] {
+    text-decoration-line: line-through;
+    text-decoration-color: #fe5f58; text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+}
+span[alt='shadow'] { text-shadow: 1px 1px 2px #FC0; }
+
+/* 空心字 */
+span[alt="hollow"] {
+    color: white;
+    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
+/* 闪烁 */
+@keyframes blink-smooth { 50% { color: transparent; } }
+span[alt="blink"] { animation: 0.5s blink-smooth infinite alternate linear; }
+
+/* KBD */
+kbd {
+    padding: 2px 4px; vertical-align: baseline;
+    font-family: var(--font-mono); font-size: 0.85em;
+    color: #333; background-color: #fafafa;
+    border-radius: 3px; border: 1.5px solid #ccc;
+}
+
+/* ---------- 6.14 公式块 ---------- */
+
+.md-rawblock-container.md-math-container > .MathJax { margin: 0 !important; }
+.md-math-block .md-math-container { transition: background-color 0.15s ease-in-out !important; }
+.md-math-block:hover .md-math-container { background-color: var(--hover-color) !important; border-radius: 8px; }
+.md-rawblock-control.md-rawblock-before,
+.md-rawblock-control.md-rawblock-input.md-mathblock-input,
+.md-rawblock-control.md-rawblock-after { background-color: var(--hover-color); }
+.md-rawblock-tooltip.md-rawblock-control { background-color: transparent !important; }
+
+/* 脚注 */
+sup.md-footnote {
+    display: inline-block; padding: 0 !important;
+    color: var(--LOGO-color) !important; background: transparent !important;
+    border: 0 !important; border-radius: 0 !important;
+    font-family: var(--font-sans) !important; font-size: 0.52em !important; font-weight: 500;
+    line-height: 1 !important; position: relative; top: -1.2em;
+    margin-left: 0.04em; vertical-align: baseline !important; white-space: nowrap;
+    transition: background-color 0.12s ease-out, border-color 0.12s ease-out, color 0.12s ease-out;
+}
+sup.md-footnote:hover { color: #5a3ec0 !important; background: transparent !important; border-color: transparent !important; }
+
+.code-tooltip.md-hover-tip {
+    padding: 0 !important;
+    background: #faf8ff !important; color: var(--font-color) !important;
+    border: 1px solid rgba(153, 102, 255, 0.20) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 28px rgba(45, 36, 70, 0.12), 0 2px 6px rgba(45, 36, 70, 0.08) !important;
+    max-width: min(32rem, calc(100vw - 48px));
+    opacity: 0; transform: translateY(-2px);
+    animation: azzi-tip-in 80ms ease-out forwards;
+    transition: opacity 120ms ease-out, transform 120ms ease-out, visibility 120ms ease-out;
+    will-change: opacity, transform;
+}
+.md-hover-tip .code-tooltip-content {
+    padding: 0.7rem 0.85rem !important; line-height: 1.45 !important;
+    text-align: left !important; border-radius: inherit !important; background: inherit !important;
+}
+.md-hover-tip .md-arrow::after {
+    background: #faf8ff !important;
+    border-left: 1px solid rgba(153, 102, 255, 0.20) !important;
+    border-top: 1px solid rgba(153, 102, 255, 0.20) !important;
+}
+
+@keyframes azzi-tip-in {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.md-math-container::-webkit-scrollbar,
+.md-math-block .MathJax::-webkit-scrollbar,
+mjx-container::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
+.md-math-container, .md-math-block .MathJax, mjx-container { scrollbar-width: none !important; -ms-overflow-style: none !important; }
+
+/* ---------- 6.14 YAML（紫色底纹纸） ---------- */
+
+#write pre.md-meta-block {
+    position: relative; overflow: hidden;
+    padding: 2.35rem 1.25rem 1.1rem 1.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem; line-height: 1.65;
+    color: rgba(60, 40, 100, 0.78);
+    background:
+        linear-gradient(to right, rgba(130, 80, 220, 0.18) 0 8px, transparent 8px 15px) left top / 15px 1.5px repeat-x,
+        linear-gradient(to right, rgba(130, 80, 220, 0.18) 0 8px, transparent 8px 15px) left bottom / 15px 1.5px repeat-x,
+        linear-gradient(to bottom, rgba(130, 80, 220, 0.18) 0 8px, transparent 8px 15px) left top / 1.5px 15px repeat-y,
+        linear-gradient(to bottom, rgba(130, 80, 220, 0.18) 0 8px, transparent 8px 15px) right top / 1.5px 15px repeat-y,
+        linear-gradient(90deg, transparent 0 2.1rem, rgba(130, 80, 220, 0.10) 2.1rem 2.16rem, transparent 2.16rem),
+        repeating-linear-gradient(0deg, transparent 0 1.58rem, rgba(130, 80, 220, 0.05) 1.58rem 1.63rem),
+        radial-gradient(circle at 18% 18%, rgba(242, 232, 255, 0.58), transparent 32%),
+        radial-gradient(circle at 86% 0%, rgba(180, 140, 240, 0.14), transparent 34%),
+        linear-gradient(135deg, rgba(242, 234, 255, 0.68), rgba(228, 218, 250, 0.36));
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow:
+        0 6px 18px rgba(45, 36, 70, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72),
+        inset 0 0 0 1px rgba(242, 232, 255, 0.18);
+    margin-top: 0 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
+    -webkit-backdrop-filter: blur(10px) saturate(1.04);
+    backdrop-filter: blur(10px) saturate(1.04);
+}
+
+#write pre.md-meta-block::before {
+    content: "YAML";
+    position: absolute; top: 0.72rem; left: 1.75rem; right: 1.25rem;
+    padding-bottom: 0.38rem;
+    font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700; line-height: 1;
+    color: rgba(120, 80, 200, 0.55);
+    border-bottom: 1px solid rgba(130, 80, 220, 0.10);
+}
+
+#write pre.md-meta-block::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image:
+        radial-gradient(circle at 13% 28%, rgba(255, 255, 255, 0.54) 0 1px, transparent 2.2px),
+        radial-gradient(circle at 76% 42%, rgba(255, 255, 255, 0.34) 0 1.2px, transparent 2.8px),
+        radial-gradient(circle at 46% 80%, rgba(130, 80, 220, 0.045) 0 1px, transparent 2.4px);
+    background-size: 22px 26px, 30px 24px, 34px 30px;
+    mix-blend-mode: soft-light;
+    opacity: 0.62;
+}
+
