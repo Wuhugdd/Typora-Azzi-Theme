@@ -1,0 +1,56 @@
+/* Anthropic 字体声明 */
+@font-face {
+    font-family: "Anthropic Serif Web Text";
+    src: url("../../claude-fonts/c66fc489e-C-BHYa_K.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Sans Web Text";
+    src: url("../../claude-fonts/cc27851ad-CFxw3nG7.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Mono Variable";
+    src: url("../../claude-fonts/c5dbe0935-B88FVziN.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Serif SC";
+    src: url("../../claude-fonts/NotoSerifSC-VariableFont_wght.ttf") format("truetype");
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../../claude-fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../../claude-fonts/NotoSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "UnifrakturMaguntia";
+    src: url("../../claude-fonts/UnifrakturMaguntia-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

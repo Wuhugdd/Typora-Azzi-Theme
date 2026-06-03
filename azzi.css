@@ -1,0 +1,46 @@
+/* =========================================
+   Azzi Theme — Typora 紫色主题
+   棉花糖配色（紫蓝灰渐变） + Claude 浅色基底 + 科研排版
+   ========================================= */
+
+@import url(./azzi/source/azzi-set.css);
+
+/* =========================================
+   覆盖变量（修改此处即可自定义配色）
+   ========================================= */
+
+:root {
+    /* --- 主色调（棉花糖浅色基底） --- */
+    --bg-color: #f3f0f9;                        /* 界面底色 */
+    --hover-color: rgba(124, 109, 219, 0.08);    /* 悬浮高亮 — 紫色调 */
+    --font-color: #141312;                       /* 正文颜色 */
+    --border-color: #c5c0db;
+
+    /* 侧边栏 */
+    --sidebar-gradient-to: rgba(255, 255, 255, 0.95);
+    --sidebar-gradient-from: rgba(255, 255, 255, 0.85);
+    --sidebar-font-color: #3d3860;
+
+    /* 棉花糖核心色 */
+    --LOGO-color: #7c6ddb;                       /* 棉花糖紫 */
+    --focus-ring-color: #7c6ddb;
+    --cotton-blue: #5b8cbf;                      /* 棉花糖冰蓝 */
+    --cotton-periwinkle: #6b7daa;                /* 紫蓝中间色 */
+
+    /* 引用块 */
+    --quote-font-color: #3d3860;
+
+    /* 行内代码 */
+    --code-bg-color: #f0e8ff;
+    --code-font-color: #6b7daa;                  /* periwinkle */
+
+    /* 滚动条 */
+    --scrollbar-color: rgba(80, 70, 120, 0.15);
+    --scrollbar-hover-color: rgba(80, 70, 120, 0.30);
+
+    /* 字体 */
+    --font-serif: "Noto Serif SC", "Songti SC", "SimSun", "宋体", "Anthropic Serif Web Text", Georgia, serif;
+    --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "SimHei", "黑体", "Anthropic Sans Web Text", system-ui, sans-serif;
+    --font-mono: "Anthropic Mono Variable", "Consolas", "Courier New", monospace;
+    --font-quote: "Noto Serif SC", "KaiTi", "楷体", "STKaiti", Georgia, serif;
+}
