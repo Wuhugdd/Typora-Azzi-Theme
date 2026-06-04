@@ -50,7 +50,7 @@
 #write .md-alert .md-fences .CodeMirror-linebackground,
 #write .md-alert .md-fences .CodeMirror-gutters { color: inherit !important; }
 
-/* ---------- 6.15 注释 ---------- */
+/* ---------- 6.11 注释 ---------- */
 .md-comment { color: var(--LOGO-color); }
 
 /* ---------- 6.12 链接 ---------- */
@@ -117,6 +117,10 @@ span[alt="hollow"] {
 @keyframes blink-smooth { 50% { color: transparent; } }
 span[alt="blink"] { animation: 0.5s blink-smooth infinite alternate linear; }
 
+@media (prefers-reduced-motion: reduce) {
+    span[alt="blink"] { animation: none; }
+}
+
 /* KBD */
 kbd {
     padding: 2px 4px; vertical-align: baseline;
@@ -178,7 +182,7 @@ sup.md-footnote:hover { color: #5a3ec0 !important; background: transparent !impo
 mjx-container::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
 .md-math-container, .md-math-block .MathJax, mjx-container { scrollbar-width: none !important; -ms-overflow-style: none !important; }
 
-/* ---------- 6.14 YAML（紫色底纹纸） ---------- */
+/* ---------- 6.15 YAML（紫色底纹纸） ---------- */
 
 #write pre.md-meta-block {
     position: relative; overflow: hidden;
